@@ -16,7 +16,7 @@ const swaggerSpec = {
         },
         servers:[
             {
-                url:"http://localhost:5000/"
+                url:"https://gestiondeproyectosswagger.herokuapp.com"
             }
         ]
     },
@@ -31,6 +31,7 @@ app.use('/',require('./routes/project'));
 app.use('/',require('./routes/staff'));
 app.use('/',require('./routes/role'));
 app.use('/',require('./routes/materialDonation'));
+app.use('/',require('./routes/task'));
 
 app.use("/api-doc",swaggerUI.serve,swaggerUI.setup(swaggerJsDoc(swaggerSpec)));
 
